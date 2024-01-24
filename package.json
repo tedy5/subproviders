@@ -1,6 +1,6 @@
 {
     "name": "@0x/subproviders",
-    "version": "8.0.2",
+    "version": "8.0.1",
     "engines": {
         "node": ">=12.0.0"
     },
@@ -82,5 +82,5 @@
     "publishConfig": {
         "access": "public"
     },
-    "gitHead": "4f91bfd907996b2f4dd383778b50c479c2602b56"
+    "gitHead": "c33f74a7025d795ed5e3699a24ceb9a58a4f45f7"
 }
