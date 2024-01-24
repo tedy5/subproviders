@@ -1,6 +1,6 @@
 {
     "name": "@0x/subproviders",
-    "version": "8.0.1",
+    "version": "7.0.1",
     "engines": {
         "node": ">=12.0.0"
     },
@@ -40,33 +40,39 @@
         }
     },
     "dependencies": {
-        "@0x/assert": "^3.0.36",
+        "@0x/assert": "^3.0.35",
         "@0x/types": "^3.3.7",
         "@0x/typescript-typings": "^5.3.2",
         "@0x/utils": "^7.0.0",
         "@0x/web3-wrapper": "^8.0.1",
         "@ethereumjs/common": "^2.6.3",
         "@ethereumjs/tx": "^3.5.1",
+        "@ledgerhq/hw-app-eth": "^5.53.0",
+        "@ledgerhq/hw-transport-webusb": "^5.53.1",
         "@types/hdkey": "^0.7.0",
         "@types/node": "12.12.54",
         "@types/web3-provider-engine": "^14.0.0",
-        "bip39": "2.5.0",
+        "bip39": "^2.5.0",
+        "bn.js": "^4.11.8",
         "ethereum-types": "^3.7.1",
         "ethereumjs-util": "^7.1.5",
         "ganache": "^7.9.2",
-        "hdkey": "2.1.0",
+        "hdkey": "^0.7.1",
         "json-rpc-error": "2.0.0",
         "lodash": "^4.17.21",
+        "semaphore-async-await": "^1.5.1",
         "web3-provider-engine": "16.0.4"
     },
     "devDependencies": {
         "@0x/ts-doc-gen": "^0.0.28",
         "@0x/tslint-config": "^4.1.5",
-        "@types/bip39": "2.4.2",
+        "@types/bip39": "^2.4.0",
+        "@types/bn.js": "^4.11.0",
         "@types/ethereumjs-tx": "^1.0.1",
         "@types/hdkey": "^0.7.0",
         "@types/lodash": "4.14.104",
         "@types/mocha": "^5.2.7",
+        "@types/sinon": "^2.2.2",
         "chai": "^4.0.1",
         "chai-as-promised": "^7.1.0",
         "dirty-chai": "^2.0.1",
@@ -75,12 +81,17 @@
         "npm-run-all": "^4.1.2",
         "nyc": "^11.0.1",
         "shx": "^0.2.2",
+        "sinon": "^15.0.0",
         "tslint": "5.11.0",
         "typedoc": "~0.16.11",
-        "typescript": "4.2.2"
+        "typescript": "4.2.2",
+        "webpack": "^4.20.2"
+    },
+    "optionalDependencies": {
+        "@ledgerhq/hw-transport-node-hid": "^5.51.1"
     },
     "publishConfig": {
         "access": "public"
     },
-    "gitHead": "c33f74a7025d795ed5e3699a24ceb9a58a4f45f7"
+    "gitHead": "8c7926898f8adcdb69297839ae8fa4fef27af83c"
 }

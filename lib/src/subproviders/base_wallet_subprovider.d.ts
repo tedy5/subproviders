@@ -1,5 +1,5 @@
 import { JSONRPCRequestPayload } from 'ethereum-types';
-import { PartialTxParams } from '../types';
+import { Callback, ErrorCallback, PartialTxParams } from '../types';
 import { Subprovider } from './subprovider';
 export declare abstract class BaseWalletSubprovider extends Subprovider {
     protected static _validateTxParams(txParams: PartialTxParams): void;
@@ -16,7 +16,7 @@ export declare abstract class BaseWalletSubprovider extends Subprovider {
      * @param next Callback to call if this subprovider decides not to handle the request
      * @param end Callback to call if subprovider handled the request and wants to pass back the request.
      */
-    handleRequest(payload: JSONRPCRequestPayload, next: () => void, end: (err: Error | null, data?: any) => void): Promise<void>;
+    handleRequest(payload: JSONRPCRequestPayload, next: Callback, end: ErrorCallback): Promise<void>;
     private _emitSendTransactionAsync;
     private _populateMissingTxParamsAsync;
 }

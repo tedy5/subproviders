@@ -1,22 +1,5 @@
 [
     {
-        "timestamp": 1680889379,
-        "version": "8.0.1",
-        "changes": [
-            {
-                "note": "Dependencies updated"
-            }
-        ]
-    },
-    {
-        "version": "8.0.0",
-        "changes": [
-            {
-                "note": "Remove subproviders except for private key, empty wallet, ganache, mnemonic, and RPC"
-            }
-        ]
-    },
-    {
         "timestamp": 1674746998,
         "version": "7.0.1",
         "changes": [

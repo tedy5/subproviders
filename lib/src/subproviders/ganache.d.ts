@@ -1,4 +1,5 @@
 import { JSONRPCRequestPayload } from 'ethereum-types';
+import { Callback, ErrorCallback } from '../types';
 import { Subprovider } from './subprovider';
 export interface GanacheOpts {
     verbose?: boolean;
@@ -39,6 +40,6 @@ export declare class GanacheSubprovider extends Subprovider {
      * @param _next Callback to call if this subprovider decides not to handle the request
      * @param end Callback to call if subprovider handled the request and wants to pass back the request.
      */
-    handleRequest(payload: JSONRPCRequestPayload, _next: () => void, end: (err: Error | null, data?: any) => void): Promise<void>;
+    handleRequest(payload: JSONRPCRequestPayload, _next: Callback, end: ErrorCallback): Promise<void>;
 }
 //# sourceMappingURL=ganache.d.ts.map

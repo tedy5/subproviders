@@ -1,4 +1,5 @@
 import { JSONRPCRequestPayload } from 'ethereum-types';
+import { Callback, ErrorCallback } from '../types';
 import { Subprovider } from './subprovider';
 /**
  * This class implements the [web3-provider-engine](https://github.com/MetaMask/provider-engine) subprovider interface.
@@ -20,6 +21,6 @@ export declare class RPCSubprovider extends Subprovider {
      * @param _next Callback to call if this subprovider decides not to handle the request
      * @param end Callback to call if subprovider handled the request and wants to pass back the request.
      */
-    handleRequest(payload: JSONRPCRequestPayload, _next: () => void, end: (err: Error | null, data?: any) => void): Promise<void>;
+    handleRequest(payload: JSONRPCRequestPayload, _next: Callback, end: ErrorCallback): Promise<void>;
 }
 //# sourceMappingURL=rpc_subprovider.d.ts.map

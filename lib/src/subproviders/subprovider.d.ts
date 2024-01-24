@@ -1,6 +1,6 @@
 import { JSONRPCRequestPayload, JSONRPCResponsePayload } from 'ethereum-types';
 import Web3ProviderEngine = require('web3-provider-engine');
-import { JSONRPCRequestPayloadWithMethod } from '../types';
+import { Callback, ErrorCallback, JSONRPCRequestPayloadWithMethod } from '../types';
 /**
  * A altered version of the base class Subprovider found in [web3-provider-engine](https://github.com/MetaMask/provider-engine).
  * This one has an async/await `emitPayloadAsync` and also defined types.
@@ -14,7 +14,7 @@ export declare abstract class Subprovider {
      * @param next A callback to pass the request to the next subprovider in the stack
      * @param end A callback called once the subprovider is done handling the request
      */
-    abstract handleRequest(payload: JSONRPCRequestPayload, next: () => void, end: (err: Error | null, data?: any) => void): Promise<void>;
+    abstract handleRequest(payload: JSONRPCRequestPayload, next: Callback, end: ErrorCallback): Promise<void>;
     /**
      * Emits a JSON RPC payload that will then be handled by the ProviderEngine instance
      * this subprovider is a part of. The payload will cascade down the subprovider middleware

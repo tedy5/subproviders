@@ -3,9 +3,15 @@ import { Callback, ErrorCallback } from '../types';
 import { Subprovider } from './subprovider';
 /**
  * This class implements the [web3-provider-engine](https://github.com/MetaMask/provider-engine) subprovider interface.
- * It intercepts the `eth_accounts` JSON RPC requests and never returns any addresses when queried.
+ * It intercepts the `eth_estimateGas` JSON RPC call and always returns a constant gas amount when queried.
  */
-export declare class EmptyWalletSubprovider extends Subprovider {
+export declare class FakeGasEstimateSubprovider extends Subprovider {
+    private readonly _constantGasAmount;
+    /**
+     * Instantiates an instance of the FakeGasEstimateSubprovider
+     * @param constantGasAmount The constant gas amount you want returned
+     */
+    constructor(constantGasAmount: number);
     /**
      * This method conforms to the web3-provider-engine interface.
      * It is called internally by the ProviderEngine when it is this subproviders
@@ -16,4 +22,4 @@ export declare class EmptyWalletSubprovider extends Subprovider {
      */
     handleRequest(payload: JSONRPCRequestPayload, next: Callback, end: ErrorCallback): Promise<void>;
 }
-//# sourceMappingURL=empty_wallet_subprovider.d.ts.map
+//# sourceMappingURL=fake_gas_estimate_subprovider.d.ts.map
